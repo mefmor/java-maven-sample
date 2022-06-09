@@ -1,4 +1,4 @@
-package net.mefmor.sample;
+package net.mefmor.sample.hello;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
@@ -14,7 +14,7 @@ import java.io.PrintStream;
  * An example of interaction with the command line
  * Theoretically, the <a href="https://stefanbirkner.github.io/system-rules/">System Rules</a> could be used instead
  */
-class MainTest {
+class ApplicationTest {
     private final InputStream defaultIn = System.in;
     private final PrintStream defaultOut = System.out;
     private final ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
@@ -30,7 +30,7 @@ class MainTest {
         String expectedOutput = String.format("What is your name? >%nHello, %s!", input);
 
         System.setIn(new ByteArrayInputStream(input.getBytes()));
-        Main.main(new String[]{});
+        Application.main(new String[]{});
 
         Assertions.assertEquals(expectedOutput, outputStream.toString());
     }

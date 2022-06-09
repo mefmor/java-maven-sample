@@ -1,8 +1,8 @@
-package net.mefmor.sample;
+package net.mefmor.sample.hello;
 
 import java.util.Scanner;
 
-public class Main {
+public class Application {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
